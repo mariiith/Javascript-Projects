@@ -54,8 +54,6 @@ $(document).ready(function () {
     // console.log(ab3);
     // console.log(ab4);
 
-
-    // how do i get these values to the scroll function???
     $(window).resize(function() {
         var ab1 = $('#c1').height() + $('#1').height();
         var ab2 = $('#c2').height();
