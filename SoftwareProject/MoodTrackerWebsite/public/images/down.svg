@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 1920 1080">
+<metadata>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="Units" value="Pixels"/>
+<vectornator:setting key="New" value="1"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="SnapToGrid" value="1"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="GridSpacing" value="36"/>
+</metadata>
+<defs/>
+<g id="Layer 1" vectornator:layerName="Layer 1">
+<path stroke="#000000" stroke-width="1" d="M-93.2247+865.085L1964.51+396.983C1976.08+394.351+1988.13+402.065+1991.43+414.212L2103.47+826.445C2106.77+838.592+2069.33+1085+2057.76+1087.63L30.7727+1321.31C19.2051+1323.94+7.15133+1316.22+3.84988+1304.08L-108.192+891.844C-111.493+879.697-104.792+867.716-93.2247+865.085Z" fill="#2f353c" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+</g>
+<g id="Layer 2" vectornator:layerName="Layer 2">
+<path d="M941.947+510.041L1959.85+272.947L1957.23+692.059L941.947+923.95L941.947+510.041Z" opacity="0.511312" fill="#81868d"/>
+</g>
+<g id="Layer 3" vectornator:layerName="Layer 3">
+<path d="M1342.8+1079.73L1591.25+1017.72L2027.28+908.888L2025+1144.13L1557.84+1187.6L1342.8+1079.73Z" opacity="1" fill="#000000"/>
+</g>
+<g id="Layer 1 copy" vectornator:layerName="Layer 1 copy">
+<path stroke="#000000" stroke-width="1" d="M-93.2247+865.085L1964.51+396.983C1976.08+394.351+1988.13+402.065+1991.43+414.212L2103.47+826.445C2106.77+838.592+2069.33+1085+2057.76+1087.63L30.7727+1321.31C19.2051+1323.94+7.15133+1316.22+3.84988+1304.08L-108.192+891.844C-111.493+879.697-104.792+867.716-93.2247+865.085Z" fill="#2f353c" stroke-linecap="round" opacity="0.753592" stroke-linejoin="round"/>
+</g>
+</svg>

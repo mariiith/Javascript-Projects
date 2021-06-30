@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Website</title>
+
+	<!-- local stylesheet, see folder 'css'-->
+	<link href="css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+</head>
+	<body>
+        
+        <header class="background">
+            <div class="container d-flex h-100">
+                
+                <div class="row mx-auto justify-content-center align-self-center">
+                    <div class="heading col-12">
+                        Mood Tracker
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="card w-75">
+                <div class="card-body">
+                    <h2>Notifications</h2>
+                    <h4 class="card-title">How often should the user get notifications?</h4>
+                    <form action="#">
+                        <div class="form-row">
+                            <div class="form-group col-1">
+                                <fieldset disabled>
+                                    <label class="invisible" for="space">space</label>
+                                    <input class="form-control" type="text" placeholder="AM" readonly>
+                                    <input class="form-control" type="text" placeholder="PM" readonly>
+                                </fieldset>
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="fromTime">From</label>
+                                <input id="fromAM" type="time" class="form-control" value="00:00" required>
+                                <input id="fromPM" type="time" class="form-control" value="12:00" required>
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="fromTime">To</label>
+                                <input id="toAM" type="time" class="form-control" value="11:59" required>
+                                <input id="toPM" type="time" class="form-control" value="23:59" required>
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="fromTime">Amount</label>
+                                <input id="countAM" type="number" class="form-control" value="3" required>
+                                <input id="countPM" type="number" class="form-control" value="4" required>
+                            </div>
+                        </div>
+                    </form>
+                    <h4 class="card-title">How should the user get notifications?</h4>
+                    <form action="#">
+                        <label class="size" for="option">Select an option</label>
+                        <div class="custom-control custom-radio">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="random" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Randomly
+                            </label> 
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="sameTime" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">
+                                All user at the same time
+                            </label> 
+                        </div>
+                        <div class="text-right mb-3">
+                            <button onclick="setNotifications();" class="btn btn-dark button" type="button">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- --------------- Cycle ------------------- -->
+
+
+        <div class="container">
+            <div class="card w-75">
+                <div class="card-body">
+                    <h2>Cycle</h2>
+                    <h4 class="card-title">How long should a cycle be?</h4>
+                    <form action="">
+                        <div class="form-row">
+                            <input id="cycleLength" class="form-control col-6" type="number" placeholder="number of" required>
+                            <label class="col-6 cycle" for="days">days</label>
+                        </div>
+                        <div class="text-right mb-3">
+                            <button onclick="cycle();" class="btn btn-dark button" type="button">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- --------------- Consent Form ------------------- -->
+
+
+        <div class="container">
+            <div class="card w-75">
+                <div class="card-body">
+                    <h2>Consent Form</h2>
+                    <h4 id="titelino" class="card-title">Upload new consent form</h4>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="file" accept=".txt">
+                        <label id="fileLabel" class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                    <div class="text-right mb-3">
+                        <button onclick="consentForm();" class="btn btn-dark button" type="button">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- --------------- Password ------------------- -->
+
+
+        <div class="container">
+            <div class="card w-75">
+                <div class="card-body">
+                    <h2>Password</h2>
+                    <h4 class="card-title">Change your password</h4>
+                    <form action="#">
+                        <div class="form-row">
+                            <div class="col-8">
+                                <input class="form-control" type="password" name="psw" id="psw0" placeholder="Old Password">
+                                <input class="form-control" type="password" name="psw" id="psw1" placeholder="New Password">
+                                <input class="form-control" type="password" name="psw" id="psw2" placeholder="Confirm new Password">
+                            </div>
+                        </div>
+
+                        <div class="text-right mb-3">
+                            <button onclick="changePsw();" class="btn btn-dark button" type="button">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- --------------- User data ------------------- -->
+
+
+        <div class="container">
+            <div class="card w-75">
+                <div class="card-body">
+                    <h2>User Data</h2>
+                    <h4 class="card-title">Select a time range to download Data</h4>
+                    <form action="#">
+                        <div class="form-row">
+                            <div class="form-group col-5">
+                                <label for="fromTime">From</label>
+                                <input id="date1" type="date" class="form-control" required>
+                            </div>
+                            <div class="form-group col-5">
+                                <label for="fromTime">To</label>
+                                <div class="form-group">
+                                    <input id="date2" type="date" class="form-control" required>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group col-2 knopf">
+                                <button onclick="downloadData();" class="btn btn-dark button2" type="button">Download</button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-5">
+                                <input id="archive1" type="date" class="form-control" required>
+                            </div>
+                            <div class="form-group col-5">
+                                <div class="form-group">
+                                    <input id="archive2" type="date" class="form-control" required>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group col-2">
+                                <button onclick="archive();" class="btn btn-dark button2" type="button">Archive</button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-10">
+                                <label class="size" for="option" style="font-size: 21px;">You can also donwload all data at once</label>
+                            </div>
+                            <div class="form-group col-2">
+                                <button onclick="downloadData1();" class="btn btn-dark button2" type="button">Download all</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+         <!-- --------------- Edit In-App-Questions ------------------- -->
+
+        <div class="container">
+            <div class="card w-75">
+                <div class="card-body">
+                    <h2>In-App Questions</h2>
+                    <h4 class="card-title">Here you can edit and add questions in the app</h4>
+                    <form action="">
+                        <div class="form-row">
+                            <div class="col-10">
+                                <input value="" id="questions" type="text" class="form-control" name="task" placeholder="Add a new Question"  aria-describedby="basic-addon2">
+                            </div>
+                            <div class="col-2">
+                                <button onclick="addQuestion();" class="btn btn-dark button2" type="button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                    <ul id="ulID" class="list-group">
+                        <div class="draggable" draggable="true">
+                            <li class="list-group-item">
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <div class="smth" contenteditable="true">How do you feel now?</div>
+                                    </div>
+                                    <div class="col-2">
+                                        <form class="form2" action="">
+                                            <div class="form-group row">
+                                                <div class="custom-control custom-radio" style="margin-right: 10px;">
+                                                    <input class="form-check-input radio-inline qrbtA" type="radio" name="exampleRadios" value="option1" checked>
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        A
+                                                    </label> 
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="form-check-input radio-inline qrbtB" type="radio" name="exampleRadios" value="option2">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        B
+                                                    </label> 
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-2 default">                                        
+                                        <span onclick="deleteQuestion(event);" class="material-icons">delete</span>
+                                        <span class="material-icons moveUp">keyboard_arrow_up</span>
+                                        <span class="material-icons moveDown">keyboard_arrow_down</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="draggable" draggable="true">
+                            <li class="list-group-item" id="tests">                            
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <div contenteditable="true">How relaxed are you now?</div>
+                                    </div>
+                                    <div class="col-2">
+                                        <form class="form2" action="">
+                                            <div class="form-group row">
+                                                <div class="custom-control custom-radio" style="margin-right: 10px;">
+                                                    <input class="form-check-input radio-inline qrbtA" type="radio" name="exampleRadios" value="option1" checked>
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        A
+                                                    </label> 
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="form-check-input radio-inline qrbtB" type="radio" name="exampleRadios" value="option2">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        B
+                                                    </label> 
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-2 default">
+                                        <span onclick="deleteQuestion(event);" class="material-icons">delete</span>
+                                        <span class="material-icons moveUp">keyboard_arrow_up</span>
+                                        <span class="material-icons moveDown">keyboard_arrow_down</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="draggable" draggable="true">
+                            <li class="list-group-item">
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <div contenteditable="true">Who have you met in the last half hour?</div>
+                                    </div>
+                                    <div class="col-2">
+                                        <form class="form2" action="">
+                                            <div class="form-group row">
+                                                <div class="custom-control custom-radio" style="margin-right: 10px;">
+                                                    <input class="form-check-input radio-inline qrbtA" type="radio" name="exampleRadios" value="option1" checked>
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        A
+                                                    </label> 
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="form-check-input radio-inline qrbtB" type="radio" name="exampleRadios" value="option2">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        B
+                                                    </label> 
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-2 default">
+                                        <span onclick="deleteQuestion(event);" class="material-icons">delete</span>
+                                        <span class="material-icons moveUp">keyboard_arrow_up</span>
+                                        <span class="material-icons moveDown">keyboard_arrow_down</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        
+                        <div class="draggable" draggable="true">
+                            <li class="list-group-item">                            
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <div contenteditable="true">Special Situations or events.</div>
+                                    </div>
+                                    <div class="col-2">
+                                        <form class="form2" action="">
+                                            <div class="form-group row">
+                                                <div class="custom-control custom-radio" style="margin-right: 10px;">
+                                                    <input class="form-check-input radio-inline qrbtA" type="radio" name="exampleRadios" value="option1" checked>
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        A
+                                                    </label> 
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="form-check-input radio-inline qrbtB" type="radio" name="exampleRadios" value="option2">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        B
+                                                    </label> 
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-2 default">
+                                        <span onclick="deleteQuestion(event);" class="material-icons">delete</span>
+                                        <span class="material-icons moveUp">keyboard_arrow_up</span>
+                                        <span class="material-icons moveDown">keyboard_arrow_down</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+
+                    <form action="">
+                        <label class="size knopf" for="option">Legende</label>
+                        <p>A - 5-point scale</p>
+                        <p>B - dropdown of questions</p>
+                    </form>
+
+                    <h4 class="knopf">When shall the questions appear?</h4>
+                    <form action="">
+                        <label class="size" for="option">Select an option</label>
+                        <div class="custom-control custom-radio">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="always" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                After every notification
+                            </label> 
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="once" value="option2">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Once a day
+                            </label> 
+                        </div>
+                    </form>
+                    <form action="">
+                        <div class="text-right mb-3">
+                            <button onclick="updateQuestions();" class="btn btn-dark button" type="button">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mx-auto justify-content-center align-self-center">
+            <button onclick="logout();" class="btn btn-light button1">LogOut</button>
+        </div>
+        
+        
+		<!-- load some scripts -->
+	    <!-- jQuery (necessary for Bootstrap s JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+        <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+        
+        
+
+
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+        <script src="/__/firebase/7.17.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCpeVHYxjwJaX-6_Si70deuUBpRSwvGDkU",
+            authDomain: "moodtracker-fec77.firebaseapp.com",
+            databaseURL: "https://moodtracker-fec77.firebaseio.com",
+            projectId: "moodtracker-fec77",
+            storageBucket: "moodtracker-fec77.appspot.com",
+            messagingSenderId: "89608969794",
+            appId: "1:89608969794:web:038e28ed7de7d7c0d657db",
+            measurementId: "G-VC9VESQJR5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+        <script src="js/main.js"></script>
+	</body>
+</html>

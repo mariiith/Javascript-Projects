@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Website</title>
+
+	<!-- local stylesheet, see folder 'css'-->
+	<link href="css/login.css" rel="stylesheet">
+
+	<!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+	
+
+</head>
+	<body>
+        <header>
+            <div class="container d-flex h-100">
+                <div class="row mx-auto justify-content-center align-self-center">
+                    <div class="heading col-12">
+                        Mood Tracker
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="card w-50">
+                <div class="card-body">
+                    <h2>Log in</h2>
+
+                    <form action="">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                            <a href="forgotPassword.html">Forgot Password?</a>
+                          </div>
+                    </form>
+
+                    <div class="text-center mb-3">
+                        <button onclick="login();" class="btn btn-dark button" type="button">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        
+        
+		<!-- load some scripts -->
+	    <!-- jQuery (necessary for Bootstrap s JavaScript plugins) -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5/jquery.min.js"></script> -->
+		<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+        <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+        
+
+                <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+        <script src="/__/firebase/7.17.1/firebase-auth.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCpeVHYxjwJaX-6_Si70deuUBpRSwvGDkU",
+            authDomain: "moodtracker-fec77.firebaseapp.com",
+            databaseURL: "https://moodtracker-fec77.firebaseio.com",
+            projectId: "moodtracker-fec77",
+            storageBucket: "moodtracker-fec77.appspot.com",
+            messagingSenderId: "89608969794",
+            appId: "1:89608969794:web:038e28ed7de7d7c0d657db",
+            measurementId: "G-VC9VESQJR5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+        
+
+        <!-- <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" /> -->
+
+        <script src="js/login.js"></script>
+        <script src="js/psw.js"></script>
+	</body>
+</html>
