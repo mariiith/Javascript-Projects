@@ -1,6 +1,9 @@
 # Javascript-Projects
 
-This repo contains almost all javascript projects I have ever done.
+This repo contains almost all javascript projects I have ever done, except for my Bachelors Project since there is still work in progress. But it will be
+uploaded the coming few days.
+
+
 In InteractiveSystem, the seventh exercise in the .hmtl all projects from this folder are linked.
 
 
