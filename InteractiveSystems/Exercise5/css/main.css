@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+	font-family: 'Helvetica Neue', sans-serif;
+	margin:40px;
+    background-color: rgb(247, 212, 176) !important;
+}
+
+.pizzaHeading{
+	font-size: 40px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	margin-left: 285px;
+}
+
+.wizard {
+    text-align: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+
+.wizard fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    position: relative;
+}
+
+.wizard fieldset:not(:first-of-type) {
+    display: none;
+}
+
+.wizard .action-button {
+    width: 100px;
+    background: rgb(101, 131, 74);
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    outline: none;
+}
+
+.wizard .action-button-previous {
+    width: 100px;
+    background: rgb(247, 212, 176);
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    outline: none;
+}
+
+.pizzaTitle {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgb(53, 53, 53);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.pizzaUberschrift{
+    font-size: 18px;
+    color: rgb(113, 113, 113);
+	margin-bottom: 30px;
+	font-weight: 400;
+	text-align: left;
+}
+.pizzaUberschrift1{
+    font-size: 18px;
+	color: black;
+	font-weight: 5 00 !important;
+	margin-top: 15px;
+    margin-bottom: 15px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.briefly{
+	font-size: 19px;
+    text-transform: uppercase;
+    color: rgb(53, 53, 53);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+	font-weight: bold;
+}
+
+.progressbar {
+    margin: 20px 20px 20px 20px;
+    overflow: hidden;
+    counter-reset: step;
+}
+
+.progressbar li {
+    margin: 20px 0px 20px 0px;
+    list-style-type: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 13px;
+    width: 25%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    font-size: 18px;
+    color: #333;
+    background: beige;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.progressbar li.active:before, .progressbar li.active:after {
+    background: rgb(101, 131, 74);
+    color: white;
+}
+
+
+img{
+	width: 70%;
+}
+
+.fig2{
+	margin-bottom: 15px;
+}
+/* ------------------HOVER----------------- */
+.pizzaHover{
+	position: relative;
+}
+
+.pizzaHover:hover .imgHover{
+	opacity: 0.5;
+}
+
+.pizzaHover:hover .addBTN{
+	opacity: 1;
+}
+
+.pizzaHover:hover .rmvBTN{
+	opacity: 1;
+}
+
+.imgHover{
+	opacity: 1;
+	transition: 0.6s;
+}
+
+.addBTN{
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.imgBorder{
+	border: 2px solid gray;
+	border-radius: 5px;
+	padding: 1px 1px 1px 1px;
+}
+
+/* .add{display: block !important;} */
+
+/* .rmv{display: none !important;} */
+
+.rmvBTN{
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.input2 {
+    width: 100%;
+}
+
+#formular{
+	margin-top: 30px;
+	display: none;
+}
+#lastDIV{
+	margin-bottom: 10px;
+}

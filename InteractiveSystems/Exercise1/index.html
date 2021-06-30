@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Interactive Systems - Template</title>
+
+	<!-- local stylesheet, see folder 'css'-->
+	<link href="css/main.css" rel="stylesheet">
+
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+	<body>
+
+		<div class="bg">
+			<div class="container-contact2">
+				<div class="wrap-contact2">
+					<form class="contact2-form validate-form" onsubmit="return results();" method="POST">
+						<div class="heading">
+							<h1>KONTAKT</h1>
+						</div>
+
+						<div class="overhd">Name:</div>
+						<div class="row form-group">
+							<div class="col mr-sm-2 wrap-input2 validate-input">
+									<input type="text" class="input2" placeholder="FIRST NAME" id="fname">
+
+							</div>
+							<div class="col wrap-input2 validate-input">
+								<input type="text" class="input2" placeholder="LAST NAME" id="lname">
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col mr-sm-2 wrap-input2 validate-input">
+								<input type="text" class="input2" placeholder="STREET" id="street">
+							</div>
+							<div class="col wrap-input2 validate-input">
+								<input type="number" class="input2" placeholder="HOUSENUMBER" id="housenumber">
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col mr-sm-2 wrap-input2 validate-input">
+								<input type="number" class="input2" placeholder="PLZ" id="plz">
+							</div>
+							<div class="col wrap-input2 validate-input">
+								<input type="text" class="input2" placeholder="CITY" id="city">
+							</div>
+						</div>
+		
+						<div class="row form-group">
+							<div class="form-group wrap-input2 validate-input">
+								<label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+									<select class="selection custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+										<option selected>Country</option>
+										<option value="Germany">Germany</option>
+										<option value="England">England</option>
+										<option value="France">France</option>
+									</select>
+							</div> 
+						</div>
+						
+						<div class="row form-group">
+							<div class="col mr-sm-2 form-group wrap-input2 validate-input">
+								<input type="email" class="input2" placeholder="EMAIL" id="exampleFormControlInput1"  >
+							</div>
+						</div>
+						
+						<div class="overhd">Birthdate:</div>
+						<div class="row form-group">
+							<div class="col mr-sm-2 form-group wrap-input2 validate-input">
+								<input type="number" class="input2" id="birthday" min="1" max="31" placeholder="DD">
+							</div>
+							<div class="col mr-sm-2 form-group wrap-input2 validate-input">
+								<input type="number" class="input2" id="birthmonth" min="1" max="12" placeholder="MM">
+							</div>
+							<div class="col mr-sm-2 form-group wrap-input2 validate-input">
+								<input type="number" class="input2" id="birthyear" min="1900" max="2015" placeholder="YYYY">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col mr-sm-2 form-group wrap-input2 validate-input">
+								<textarea name="message" id="message" class="input2" placeholder="INTERESTS"  rows="4"></textarea>
+							</div>
+						</div>
+		
+						<div class="row form-group">
+							<div class="col-sm-2 form-check form-check-inline form-group">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male" id="male">
+								<label class="form-check-label" for="inlineRadio1">Male</label>
+							</div>
+							<div class="col-sm-2 form-check form-check-inline form-group">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female" id="female">
+								<label class="form-check-label" for="inlineRadio2">Female</label>
+							</div>
+							<div class="col-sm-6 form-check form-check-inline form-group">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="diverse" id="diverse">
+								<label class="form-check-label" for="inlineRadio3">Diverse</label>
+							</div>
+							<div class="col-sm-2custom-control custom-checkbox form-group check">
+								<input type="checkbox" class="custom-control-input" id="customControlAutosizing" value="Newsletter">
+								<label class="custom-control-label" for="customControlAutosizing">Newsletter?</label>
+							</div>
+						</div>
+						
+		
+						<div class="form-group">
+							<input type="submit" name="submit" class="form-control submit" value="Senden" onclick="myfun(); return false">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		
+
+
+		<footer contenteditable="true">Interactive Systems - 2020</footer>
+
+		<!-- load some scripts -->
+		<!-- jQuery (necessary for Bootstrap s JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

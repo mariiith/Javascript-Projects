@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Interactive Systems - Template</title>
+
+	<!-- local stylesheet, see folder 'css'-->
+	<link href="css/main.css" rel="stylesheet">
+
+
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	
+		
+
+
+</head>
+	<body>
+		<div>
+			<h2 class="pizzaHeading">Order some delicious Pizza</h2>
+		</div>
+
+		<div class="row justify-content-md-center">
+			<div class="col-12 col-sm-9">
+				<form class="wizard">
+					<!-- progressbar -->
+					<ul class="progressbar">
+						<li class="active">Basics</li>
+						<li>Toppings</li>
+						<li>Payment Information</li>
+						<li>DONE</li>
+					</ul>
+					<!-- fieldsets -->
+					<fieldset>
+						<h2 class="pizzaTitle">Basics</h2>
+						<p class="pizzaUberschrift">Wähle deine Qualitäts-Pizza</p>
+						
+						<div class="form-group">
+							<label class="float-left" for="formGroupExampleInput2">Pizza-Größe</label>
+							<select class="selection custom-select mr-sm-2" id="size" required>
+								<option data-values="2.50" value="Klein">Klein: 2,50€</option>
+								<option data-values="3.50" value="Mittel">Mittel: 3,50€</option>
+								<option data-values="4.00" value="Groß">Groß: 4,00€</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="float-left" for="formGroupExampleInput2">Pizza-Teig</label>
+							<select class="selection custom-select mr-sm-2" id="dough" required>
+								<option data-values="0.00" value="Weizen" selected>Weizen (+0,00€)</option>
+								<option data-values="0.50" value="Dinkel">Dinkel (+0,50€)</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="float-left" for="formGroupExampleInput2">Pizza-Soße</label>
+							<select class="selection custom-select mr-sm-2" id="sauce" required>
+								<option data-values="0.00" value="Basilikum" selected>Basilikum (+0,00€)</option>
+								<option data-values="0.00" value="Knoblauch">Knoblauch (+0,00€)</option>
+								<option data-values="0.50" value="Scharf">Scharf (+0,50€)</option>
+							</select>
+						</div>
+						<button type="button" name="next" class="btn action-button next float-right" aria-placeholder ="Next">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</button>
+					</fieldset>
+
+					<fieldset>
+						<h2 class="pizzaTitle">Toppings</h2>
+
+						<div>
+							<div class="row">
+								<div class="col pizzaHover">
+									<img class="imgHover" src="images/cheese.png" alt="" id="pic1">
+									<div class="addBTN text-center">
+										<button  id="add1" onclick="addSomething('1');" type="button" class="btn btn-primary add" value="Cheese" data-food="1.00">+</button>
+									</div>
+									<div class="rmvBTN text-center">
+										<button id="rmv1" onclick="rmvSomething('1');" type="button" class="btn btn-primary rmv" value="Cheese" data-food="1.00">-</button>
+									</div>
+									<figcaption >Cheese </figcaption>
+									<figcaption class="fig2">(+1,00€)</figcaption>
+								</div>
+
+								<div class="col pizzaHover">
+									<img class="imgHover" src="images/chili.png" alt="" id="pic2">
+									<div class="addBTN text-center">
+										<button  id="add2" onclick="addSomething('2');" type="button" class="btn btn-primary add" value="Chili" data-food="1.10" >+</button>
+									</div>
+									<div class="rmvBTN text-center">
+										<button id="rmv2" onclick="rmvSomething('2');" type="button" class="btn btn-primary rmv" value="Chili" data-food="1.10" >-</button>
+									</div>
+									<figcaption>Chili</figcaption>
+									<figcaption class="fig2">+1,10€</figcaption>
+								</div>
+
+								<div class="col pizzaHover">
+									<img class="imgHover" src="images/meat.png" alt="" id="pic3">
+									<div class="addBTN text-center">
+										<button  id="add3" onclick="addSomething('3');" type="button" class="btn btn-primary add" value="Salami" data-food="3.00">+</button>
+									</div>
+									<div class="rmvBTN text-center">
+										<button id="rmv3" onclick="rmvSomething('3');" type="button" class="btn btn-primary rmv" value="Salami" data-food="3.00">-</button>
+									</div>
+									<figcaption>Salami</figcaption>
+									<figcaption class="fig2">+2,00€</figcaption>
+								</div>
+
+								<div class="col pizzaHover">
+									<img class="imgHover" src="images/mushroom.png" alt="" id="pic4">
+									<div class="addBTN text-center">
+										<button  id="add4" onclick="addSomething('4');" type="button" class="btn btn-primary add" value="Mushrooms" data-food="1.00">+</button>
+									</div>
+									<div class="rmvBTN text-center">
+										<button id="rmv4" onclick="rmvSomething('4');" type="button" class="btn btn-primary rmv" value="Mushrooms" data-food="1.00">-</button>
+									</div>
+									<figcaption>Mushrooms</figcaption>
+									<figcaption class="fig2">+1,00€</figcaption>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col pizzaHover">
+									<img class="imgHover" src="images/olive.png" alt="" id="pic5">
+									<div class="addBTN text-center">
+										<button  id="add5" onclick="addSomething('5');" type="button" class="btn btn-primary add" value="Olives" data-food="1.20">+</button>
+									</div>
+									<div class="rmvBTN text-center">
+										<button id="rmv5" onclick="rmvSomething('5');" type="button" class="btn btn-primary rmv" value="Olives" data-food="1.20">-</button>
+									</div>
+									<figcaption>Olives</figcaption>
+									<figcaption class="fig2">+1,20€</figcaption>
+								</div>
+
+								<div class="col pizzaHover">
+									<img class="imgHover" src="images/onion.png" alt="" id="pic6">
+									<div class="addBTN text-center">
+										<button  id="add6" onclick="addSomething('6');" type="button" class="btn btn-primary add" value="Onions" data-food="1.20">+</button>
+									</div>
+									<div class="rmvBTN text-center">
+										<button id="rmv6" onclick="rmvSomething('6');" type="button" class="btn btn-primary rmv" value="Onions" data-food="1.20">-</button>
+									</div>
+									<figcaption>Onions</figcaption>
+									<figcaption class="fig2">+1,20€</figcaption>
+								</div>
+
+								<div class="col pizzaHover">
+									<img class="imgHover" src="images/tomato.png" alt="" id="pic7">
+									<div class="addBTN text-center">
+										<button  id="add7" onclick="addSomething('7');" type="button" class="btn btn-primary add" value="Tomatoes" data-food="1.10">+</button>
+									</div>
+									<div class="rmvBTN text-center">
+										<button id="rmv7" onclick="rmvSomething('7');" type="button" class="btn btn-primary rmv" value="Tomatoes" data-food="1.10">-</button>
+									</div>
+									<figcaption>Tomatoes</figcaption>
+									<figcaption class="fig2">+1,10€</figcaption>
+								</div>
+
+								<div class="col pizzaHover">
+									<img class="imgHover" src="images/zucchini.png" alt="" id="pic8">
+									<div class="addBTN text-center">
+										<button  id="add8" onclick="addSomething('8');" type="button" class="btn btn-primary add" value="Zuccini" data-food="1.50">+</button>
+									</div>
+									<div class="rmvBTN text-center">
+										<button id="rmv8" onclick="rmvSomething('8');" type="button" class="btn btn-primary rmv" value="Zuccini" data-food="1.50">-</button>
+									</div>
+									<figcaption>Zuccini</figcaption>
+									<figcaption class="fig2">+1,50€</figcaption>
+								</div>
+							</div>
+						</div>
+
+						<div class="listItems">
+							<ul class="list-group" id="myUL">
+							</ul>
+						</div>
+						
+
+						
+
+						<button onclick="selection(); sumTotal();" type="button" name="next" class="btn action-button next float-right" aria-placeholder ="Next">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</button>
+						<button type="button" name="previous" class="btn previous action-button-previous float-right" value="Previous">
+							<i class="fa fa-arrow-left" aria-hidden="true"></i>
+						</button>
+					</fieldset>
+
+					<fieldset>
+
+						
+
+						<h2 class="pizzaTitle">Payment Information</h2>
+						<h4>Übersicht</h4>
+
+
+						<div class="form-group">
+							<h3 class="pizzaUberschrift1">Basics</h3>
+							<div class="col" id="lastDIV">
+							</div>
+
+							<h3 class="pizzaUberschrift1">Toppings</h3>
+							<div class="col" id="foodDIV">
+							</div>
+
+							<div class="col">
+								<div class="row">
+									<p id="essen"> </p>
+								</div>
+							</div>
+						</div>
+
+						
+						<h3 class="pizzaUberschrift">Adress-Auswahl</h3>
+						<div class="row">
+							<div class="col form-check pull-left">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+								<label class="form-check-label" for="inlineRadio1">Standardadresse</label>
+							</div>
+							<div class="col form-check pull-left">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+								<label class="form-check-label" for="inlineRadio2">Neue Adresse</label>
+							</div>
+						</div>
+						<div class="col" id="bart">
+							<p> Bart Bertinson  <br>
+							Universitätsstraße 10 <br>
+							78464 Konstanz</p>
+						</div>
+						<div id="formular">
+							<div class="col">
+								<div class="row form-group">
+									<div class="col-2 overhd">Name:</div>
+									<div class="col wrap-input2 validate-input">
+										<input type="text" class="input2" placeholder="Vorname" id="fname">
+									</div>
+									<div class="col wrap-input2 validate-input">
+										<input type="text" class="input2" placeholder="Nachname" id="lname">
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="row form-group">
+									<div class="col-2 overhd">Straße:</div>
+									<div class="col wrap-input2 validate-input">
+										<input type="text" class="input2" placeholder="Straße" id="fname">
+									</div>
+									<div class="col wrap-input2 validate-input">
+										<input type="number" class="input2" placeholder="Hausnummer" id="lname">
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="row form-group">
+									<div class="col-2 overhd">Wohnort:</div>
+									<div class="col wrap-input2 validate-input">
+										<input type="number "class="input2" placeholder="PLZ" id="fname">
+									</div>
+									<div class="col wrap-input2 validate-input">
+										<input type="text" class="input2" placeholder="Ort" id="lname">
+									</div>
+								</div>
+							</div>
+						</div>
+						
+
+						<button onclick="onTheWay();" type="button" name="next" class="btn action-button next float-right" aria-placeholder ="Next">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</button>
+						<button type="button" name="previous" class="btn previous action-button-previous float-right" value="Previous">
+							<i class="fa fa-arrow-left" aria-hidden="true"></i>
+						</button>
+						
+					</fieldset>
+					<fieldset>
+						<h2 class="pizzaTitle">DONE</h2>
+						<h3 class="pizzaUberschrift">Ihr Auftrag wird nun bearbeitet. Bitte gedulden sie sich einen Moment.</h3>
+						<h3 class="pizzaUberschrift">Für einen erneuten Auftrag, klicken sie auf den Button unten rechts.</h3>
+
+						<button type="submit" name="submit" class="btn submit action-button float-right" aria-placeholder="Redo">
+							<i class="fa fa-repeat" aria-hidden="true"></i>
+						</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+
+		<!-- load some scripts -->
+		<!-- jQuery (necessary for Bootstrap s JavaScript plugins) -->
+
+		<!-- <script src="/path/to/bootstrap.min.css"></script> -->
+	    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+		<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="js/main.js"></script>
+		<!-- <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script> -->
+		<!-- <script src="jquery-3.5.1.min.js"></script> -->
+		
+	</body>
+</html>

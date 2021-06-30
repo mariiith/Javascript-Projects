@@ -1,0 +1,420 @@
+html, body {
+	font-family: 'Helvetica Neue', sans-serif;
+	margin:0 20px;
+}
+
+.headering{
+	font-weight: 200;
+	text-align: center;
+	overflow: hidden;
+	padding-right: 90px;
+	font-size: 40px;
+}
+
+.intro{
+	font-style: italic;
+	text-align: center;
+	padding-right: 90px;
+}
+
+.active{
+	background-color: rgb(224, 184, 184);
+}
+
+footer{
+	bottom:0px;
+	position:fixed;
+	background-color:black;
+	width:100%;
+	height:30px;
+	left:0px;
+	color:white;
+	font-size: 0.9em;
+	padding-left:20px;
+}
+
+.header{
+	margin-top: 20px;
+}
+
+.logo{
+	width: 100px;
+	float: left;
+}
+
+.about{
+	text-align: center;
+	margin: 90px 0px 10px 0px;
+	overflow: hidden;
+}
+
+.about p{
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.about h2{
+	font-weight: 300;
+}
+
+hr {
+	height: 2px;
+	overflow: hidden;
+}
+
+.dotts{
+	margin-top: 80px;
+	margin-bottom: 60px;
+	border-top: 5px dotted rgb(205, 152, 152);
+	border-bottom: none;
+	width: 700px;
+	overflow: auto;
+}
+.cent{
+	text-align: center;
+	align-content: center;
+}
+.cent h2{
+	font-weight: 300;
+}
+
+.cent h3{
+	font-weight: 300;
+}
+.alignment{
+	margin: 10px 20px 10px 20px;
+}
+
+.container{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.pictures{
+	width: 100%;
+	
+}
+
+.image{
+	width: 600px;
+	margin-top: 20px;
+	border: 2px solid black;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+.description{
+	margin: 10px 0 10px 0;
+	width: 600px;
+}
+
+.huelle{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.txt{
+	margin: 10px 20px 10px 20px;
+	width: 400px;
+}
+
+.block{
+	text-align: justify;
+	line-height: 25px;
+}
+
+.logo1{
+	width: 50px;
+	margin: 10px 10px 5px 10px;
+}
+
+.contaction{
+	width: 50%;
+	flex: 1 0 50%;
+}
+
+.form{
+	width: 100%;
+}
+
+.label{
+	width: 100%;
+	text-align: left;
+	float: left;
+	margin-bottom: 5px;
+}
+.input{
+	width: 100%;
+	height: 20px;
+	margin: 0px 5px 10px 0;
+}
+
+.message{
+	width: 100%;
+	height: 50px;
+	margin: 0px 5px 10px 0;
+}
+
+/* ---------------- navigation bar ----------------  */
+
+.navigation{
+	overflow: hidden;
+	position: sticky;
+	top: 0;
+	display: inline-flex;
+	float: right;
+	width: 100%;
+	background-color: rosybrown;
+	margin-bottom: 20px;
+	padding: 20px 0 20px 0;
+	
+}
+
+
+.navigation a{
+	justify-content: end;
+	align-items: center;
+	margin: 10px;
+	padding: 5px;
+	text-decoration: none;
+	color: black;
+	/* background-color: rgb(224, 184, 184); */
+}
+
+.hidden{
+	display: none;
+}
+
+/* ---------------- medias ----------------  */
+
+@media screen and (max-width: 500px) {
+	.logo {
+	  float: none;
+	  display: block;
+	  margin: 0 auto;
+	  text-align: center;
+	}
+	.intro{
+		padding: 0;
+	}
+	.headering {
+	  float: none;
+	  padding: 0;
+	}
+  }
+
+  @media screen and (max-width: 720px){
+	  .dotts{
+		  width: 400px;
+		  align-items: center;
+	  }
+  }
+  @media screen and (max-width: 500px){
+	.dotts{
+		width: 280px;
+		align-items: center;
+	}
+}
+
+  @media screen and (max-width: 1400px){
+	.alignment{
+		margin: 0 auto 50px 0;
+	}
+	  .image{
+		  width: 500px;
+	  }
+	  .description{
+		  width: 500px;
+	  }
+  }
+
+  @media screen and (max-width: 1170px){
+	.alignment{
+		margin: 0 auto 50px 0;
+	}
+	.image{
+		width: 400px;
+		align-items: center;
+	}
+	.description{
+		width: 400px;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 970px){
+	.alignment{
+		margin: 0 auto 50px 0;
+	}
+	.image{
+		width: 300px;
+	}
+	.description{
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 720px){
+	.alignment{
+		margin: 0 auto 50px 0;
+	}
+	.image{
+		width: 500px;
+	}
+	.description{
+		width: 500px;
+	}
+}
+
+@media screen and (max-width: 585px){
+	.alignment{
+		margin: 0 auto 50px 0;
+	}
+	.image{
+		width: 400px;
+	}
+	.description{
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 485px){
+	.alignment{
+		margin: 0 auto 50px 0;
+	}
+	.image{
+		width: 300px;
+	}
+	.description{
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 375px){
+	.alignment{
+		margin: 0 auto 50px 0;
+	}
+	.image{
+		width: 260px;
+		margin: 0 auto;
+	}
+	.description{
+		width: 260px;
+	}
+}
+
+
+/* ------------------------ paragraphen ------------------------------- */
+
+@media screen and (max-width: 1400px){
+	.txt{
+		text-align: center;
+		width: 370px;
+	}
+}
+
+@media screen and (max-width: 1310px){
+	.txt{
+		text-align: center;
+		width: 350px;
+	}
+}
+
+@media screen and (max-width: 1250px){
+	.txt{
+		text-align: center;
+		width: 330px;
+	}
+}
+@media screen and (max-width: 1190px){
+	.txt{
+		text-align: center;
+		width: 300px;
+	}
+}
+@media screen and (max-width: 1100px){
+	.txt{
+		text-align: center;
+		width: 270px;
+	}
+}
+@media screen and (max-width: 1010px){
+	.txt{
+		text-align: center;
+		width: 240px;
+	}
+}
+@media screen and (max-width: 920px){
+	.txt{
+		text-align: center;
+		width: 210px;
+	}
+}
+@media screen and (max-width: 830px){
+	.txt{
+		text-align: center;
+		width: 190px;
+	}
+}
+@media screen and (max-width: 770px){
+	.txt{
+		text-align: center;
+		width: 170px;
+	}
+}
+@media screen and (max-width: 720px){
+	.txt{
+		text-align: center;
+		width: 500px;
+	}
+}
+
+/* -------------------contact----------------------------- */
+
+@media screen and (max-width: 720px){
+	.contaction{
+		flex: 1 0 100%;
+	}
+}
+
+/* ------------------- nav-bar ----------------------------- */
+
+@media screen and (max-width: 720px){
+	.navigation{
+		display:inline-block;
+		text-align: center;
+		background-color: white;
+	}
+	.navigation a{
+		display: none;
+		text-align: center;
+		padding: 5px;
+		margin: auto;
+	}
+
+	.navigation a.hidden{
+		display: inline-block;
+		
+	}
+
+	.navigation.ham{
+		position: sticky;
+		background-color: rosybrown;
+	}
+
+	.navigation.ham.hidden{
+		display: inline-block;
+		align-items: center;
+	}
+
+	.navigation.ham a{
+		overflow: hidden;
+		position: sticky;
+		top: 0;
+		display: inline-block;
+		/* float: right; */
+		width: 100%;
+		
+
+	}
+}

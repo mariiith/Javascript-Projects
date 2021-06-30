@@ -1,0 +1,113 @@
+html, body {
+	font-family: 'Helvetica Neue', sans-serif;
+	margin:20px;
+}
+
+.header{
+	margin-top:0px;
+	font-weight: 200;
+	letter-spacing: 2px;
+}
+
+.heading{
+	text-align: center;
+}
+
+.intro{
+	margin-top:-15px;
+	margin-bottom:30px;
+	font-style: italic;
+}
+
+footer{
+	bottom:0px;
+	position:fixed;
+	background-color:black;
+	width:100%;
+	height:30px;
+	left:0px;
+	color:white;
+	font-size: 0.9em;
+	padding-left:20px;
+}
+
+.container{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form{
+	padding: 15px;
+	width: 600px;
+	
+}
+
+.allToDos{
+	width: 500px;
+	/*display: none;*/
+  
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	margin: 0 0 5px 0;
+    padding: 0 0.5em;
+    overflow: hidden;
+	font-size: 1.3em;
+	color: #2f4f4f;
+	opacity: 0;
+    animation: new-item-animation .3s linear forwards;
+}
+
+@keyframes new-item-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-400px);
+}
+ 
+    to {
+        opacity: 1;
+        transform : translateY(0);
+    }
+}
+
+.todo li:nth-child(2n+1){
+    background: #edd0b1;
+}
+.todo li:nth-child(2n){
+    background: #b7bfbb;
+}
+
+
+
+.delete{
+	cursor: pointer;
+}
+
+@keyframes removed-item-animation {
+    0% {
+        opacity: 1;
+        transform: rotateZ(0);
+}
+ 
+    100% {
+        opacity: 0;
+        transform: translateY(600px) rotateZ(90deg);
+    }
+}
+
+.closeSlide {
+	margin-bottom:0;
+	height:0px;
+	padding-top:0;
+	padding-bottom:0;
+	transition: 0.2s all ease-out;
+	/*Just reverse any spacing styling you've applied to make it **magically** disappear*/
+  }

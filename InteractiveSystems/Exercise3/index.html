@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Interactive Systems - Template</title>
+
+	<!-- local stylesheet, see folder 'css'-->
+	<link href="css/main.css" rel="stylesheet">
+
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+	<body>
+
+		<div class="container">
+			<form action="index.html" method="post">
+				<div class="heading">
+					<h1 class="header">ToDo-List</h1>
+					<p class="intro">Do what you do</p>
+				</div>
+
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" name="task" placeholder="Add a todo"  aria-describedby="basic-addon2">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary button" type="submit">Add</button>
+					</div>
+				</div>
+			</form>
+        </div>
+        <div class="container">
+			<div class="allToDos ">
+				<ul class="todo">
+					<!-- <li> 
+						<div class="input-group mb-3 row">
+							<div class="col-11">
+								<label>hi was geht ab</label>
+							</div>
+							<span onclick="updateStripes();" class="delete">x</span>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+        </div>
+       
+		<footer>Interactive Systems - 2020</footer>
+
+		<!-- load some scripts -->
+	    <!-- jQuery (necessary for Bootstrap s JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	    <script src="js/main.js"></script>
+	    <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+	</body>
+</html>
